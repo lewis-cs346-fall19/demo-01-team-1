@@ -5,7 +5,7 @@ This is the client
 import socket
 
 
-HOST = "this.host"
+HOST = ""
 PORT = 3429
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))

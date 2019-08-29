@@ -20,5 +20,6 @@ while(1):
 	data = conn.recv(1024).decode()
 	if not data: break
 	conn.sendall(data)
+	print(data)
 
 conn.close() 
