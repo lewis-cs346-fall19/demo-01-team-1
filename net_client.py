@@ -16,7 +16,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT)) #connects to the port
 
 #create and send message
-msg = "This is the message"
+msg = "This is the message."
 s.sendall(msg.encode())
 
 #receive data and close
