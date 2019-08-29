@@ -3,31 +3,22 @@ This is the server side
 
 '''
 
-
 import socket
 
+HOST = ""
+PORT = 3429
 
+s = socket.socket(AF_INET, SOCK_STREAM)
 
-def main():
-	HOST = ""
-	PORT = 3429
-	
-	s = socket.socket(AF_INET, SOCK_STREAM)
+s.bind((HOST, PORT))
 
-	s.bind((host, port))
+s.listen(1)
 
-	s.listen(1)
+conn, addr = s.accept()
 
-	conn, addr = s.accept()
+while(1):
+	data = conn.recv(1024).decode()
+	if not data: break
+	conn.sendall(data)
 
-	while(1):
-		data = conn.recv(1024)
-		if not data: break
-		conn.sendall(data)
-
-	conn.close() 
-	
-
-
-if __name__ == "__main__":
-	main()
+conn.close() 
