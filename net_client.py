@@ -21,6 +21,8 @@ s.sendall(msg.encode())
 
 #receive data and close
 data = s.recv(1024).decode()
+print(data)
+
 s.close()
 
 
