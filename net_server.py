@@ -9,8 +9,8 @@ import socket
 
 
 def main():
-	host = ""
-	port = 3429
+	HOST = ""
+	PORT = 3429
 	
 	s = socket.socket(AF_INET, SOCK_STREAM)
 
