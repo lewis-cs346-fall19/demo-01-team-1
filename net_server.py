@@ -23,7 +23,7 @@ while(1):
 	data = conn.recv(1024).decode()
 	if not data: break
 	print(data)
-	data += "This message has been received"
+	data += " This message has been received."
 	conn.sendall(data)
 
 conn.close() 
