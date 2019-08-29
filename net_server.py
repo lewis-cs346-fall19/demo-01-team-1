@@ -8,7 +8,7 @@ import socket
 HOST = ""
 PORT = 3429
 
-s = socket.socket(AF_INET, SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 s.bind((HOST, PORT))
 
